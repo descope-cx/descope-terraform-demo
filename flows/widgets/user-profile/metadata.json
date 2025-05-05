@@ -1,0 +1,20 @@
+{
+  "description": "Allow end users to manage their profile",
+  "flowsIds": [
+    "user-profile-delete-email",
+    "user-profile-delete-name",
+    "user-profile-delete-phone",
+    "user-profile-reset-password",
+    "user-profile-set-email",
+    "user-profile-set-name",
+    "user-profile-set-phone",
+    "user-profile-set-picture",
+    "user-profile-set-passkeys",
+    "user-profile-reset-totp"
+  ],
+  "name": "User Profile Widget",
+  "screens": [
+    "root"
+  ],
+  "type": "user-profile-widget"
+}

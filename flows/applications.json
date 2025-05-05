@@ -1,0 +1,16 @@
+{
+  "applications": [
+    {
+      "description": "Default OIDC APP",
+      "enabled": true,
+      "id": "descope-default-oidc",
+      "logo": "",
+      "name": "OIDC default application",
+      "oidc": {
+        "claims": [],
+        "forceAuthentication": false,
+        "loginPageUrl": ""
+      }
+    }
+  ]
+}

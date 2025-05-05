@@ -1,0 +1,518 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "headerContainer",
+        "grid"
+      ],
+      "props": {
+        "align": "center",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "deleteUsers",
+        "resetPassword",
+        "removePasskey",
+        "disableUser",
+        "enableUser",
+        "editUser",
+        "createUser"
+      ],
+      "parent": "headerContainer",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "1",
+        "width": "auto"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "createUser": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "+ User",
+        "color": "primary",
+        "data-id": "create-user",
+        "data-testid": "create-user-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createUser",
+        "shape": "",
+        "size": "sm",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "UserManagementCreateButton"
+      }
+    },
+    "deleteUsers": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Delete",
+        "color": "primary",
+        "data-id": "delete-users",
+        "data-testid": "delete-users-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "deleteUsers",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementDeleteButton"
+      }
+    },
+    "disableUser": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Disable",
+        "color": "primary",
+        "data-id": "disable-user",
+        "data-testid": "disable-user-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "disableUser",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementDisableButton"
+      }
+    },
+    "editUser": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Edit",
+        "color": "primary",
+        "data-id": "edit-user",
+        "data-testid": "edit-user-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "editUser",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementEditButton"
+      }
+    },
+    "enableUser": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Activate",
+        "color": "primary",
+        "data-id": "enable-user",
+        "data-testid": "enable-user-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "enableUser",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementActivateButton"
+      }
+    },
+    "grid": {
+      "custom": {},
+      "displayName": "Grid",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridSelectionColumn",
+        "gridLoginIdsColumn",
+        "gridStatusColumn",
+        "gridNameColumn",
+        "gridEmailColumn",
+        "gridPhoneColumn",
+        "gridRolesColumn"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "column-reordering-allowed": true,
+        "data-id": "users-table",
+        "size": "sm",
+        "st-host-height": "300px",
+        "style": {
+          "width": "100%"
+        }
+      },
+      "type": {
+        "resolvedName": "Grid"
+      }
+    },
+    "gridEmailColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Email",
+        "path": "email",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridLoginIdsColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Login ID",
+        "path": "loginIds",
+        "resizable": true
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridNameColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Name",
+        "path": "name",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridPhoneColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Phone",
+        "path": "phone",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridRolesColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Roles",
+        "path": "roles",
+        "resizable": true
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridSelectionColumn": {
+      "custom": {},
+      "displayName": "Grid Selection Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "auto-width": true,
+        "frozen": true
+      },
+      "type": {
+        "resolvedName": "GridSelectionColumn"
+      }
+    },
+    "gridStatusColumn": {
+      "custom": {},
+      "displayName": "Grid Custom Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridStatusColumnInvited",
+        "gridStatusColumnActive",
+        "gridStatusColumnDisabled"
+      ],
+      "parent": "grid",
+      "props": {
+        "header": "Status",
+        "path": "status",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridCustomColumn"
+      }
+    },
+    "gridStatusColumnActive": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridStatusColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "active",
+        "mode": "primary",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridStatusColumnDisabled": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridStatusColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "disabled",
+        "mode": "error",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridStatusColumnInvited": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridStatusColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "invited",
+        "mode": "default",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "headerContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "search",
+        "buttonsContainer"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "headerContainer",
+        "justify": "between",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "removePasskey": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Remove passkey",
+        "color": "primary",
+        "data-id": "remove-passkey",
+        "data-testid": "remove-passkey-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "removePasskey",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementRemovePasskeyButton"
+      }
+    },
+    "resetPassword": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Reset password",
+        "color": "primary",
+        "data-id": "reset-password",
+        "data-testid": "reset-password-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "resetPassword",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "UserManagementResetPasswordButton"
+      }
+    },
+    "search": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "headerContainer",
+      "props": {
+        "bordered": true,
+        "data-id": "search-input",
+        "data-testid": "search-input",
+        "full-width": false,
+        "id": "search",
+        "label": "",
+        "max": 100,
+        "name": "",
+        "placeholder": "Search",
+        "required": false,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    }
+  },
+  "screenId": "root"
+}

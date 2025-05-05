@@ -1,0 +1,13 @@
+{
+  "configuration": {
+    "overrideIpAddress": "",
+    "overrideUserEmail": "",
+    "overrides": false,
+    "secretKey": "PLACEHOLDER_VALUE",
+    "siteId": "sadfsadf"
+  },
+  "description": "",
+  "id": "CI2wZMn5UKOKCWdDtLVJLQHkfnoIj",
+  "name": "Forter",
+  "type": "forter"
+}

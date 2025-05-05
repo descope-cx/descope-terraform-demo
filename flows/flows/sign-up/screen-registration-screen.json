@@ -1,0 +1,280 @@
+{
+  "contents": {
+    "0GPnvJBlvR": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "align": "center",
+        "children": "First, we need to find you in our membership list. You can register with either your Member ID number or your social security number.\n\n\n\nWhich ID type would you like to use?\n\n",
+        "full-width": false,
+        "id": "0GPnvJBlvR",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "left",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "1sMmkeVxVT": {
+      "custom": {},
+      "displayName": "Error Message",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "align": "center",
+        "data-type": "error-message",
+        "full-width": false,
+        "id": "1sMmkeVxVT",
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "error",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "ErrorMessage"
+      }
+    },
+    "BU7ndH7P1P": {
+      "custom": {},
+      "displayName": "Image",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "YcFfVtac6I",
+      "props": {
+        "alt": "Image",
+        "height": "30px",
+        "id": "BU7ndH7P1P",
+        "src": "/images/1c9d8aabd88dbf5e8eb3.png",
+        "width": "30px"
+      },
+      "type": {
+        "resolvedName": "Image"
+      }
+    },
+    "LmrSIGOWZb": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "align": "center",
+        "children": "\u003cb\u003eRegister Online\u003c/b\u003e\n\n",
+        "full-width": false,
+        "id": "LmrSIGOWZb",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "h2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "LmrSIGOWZb",
+        "0GPnvJBlvR",
+        "lRl-MYwqjZ",
+        "WRoTINR4HT",
+        "tkOlu93qRF",
+        "1sMmkeVxVT"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "8",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "st-items-grow": 0,
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "WRoTINR4HT": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Single Select",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "allowClearValue": true,
+        "bordered": true,
+        "data": [
+          {
+            "label": "Member ID",
+            "value": "Member ID"
+          },
+          {
+            "label": "Social security number",
+            "value": "Social security number"
+          }
+        ],
+        "data-errormessage-value-missing": "Please fill out this field.",
+        "data-has-dynamic-attr-values": true,
+        "default-value": "Member ID",
+        "full-width": true,
+        "id": "WRoTINR4HT",
+        "label": "Select ID Type",
+        "label-type": "floating",
+        "name": "",
+        "placeholder": "",
+        "required": false,
+        "size": "md",
+        "variant": "combobox"
+      },
+      "type": {
+        "resolvedName": "SingleSelect"
+      }
+    },
+    "YcFfVtac6I": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "BU7ndH7P1P",
+        "uoUEBaL2Wh"
+      ],
+      "parent": "lRl-MYwqjZ",
+      "props": {
+        "align": "center",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "YcFfVtac6I",
+        "justify": "start",
+        "paddingX": "4",
+        "paddingY": "1",
+        "spaceBetween": "4",
+        "st-items-grow": 0,
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "lRl-MYwqjZ": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "YcFfVtac6I"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#CECECEFF",
+        "backgroundImageUrl": "",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "lRl-MYwqjZ",
+        "justify": "start",
+        "paddingX": "3",
+        "paddingY": "3",
+        "spaceBetween": "4",
+        "st-items-grow": 0,
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "tkOlu93qRF": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Find me",
+        "color": "primary",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "tkOlu93qRF",
+        "shape": "",
+        "size": "md",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "uoUEBaL2Wh": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "YcFfVtac6I",
+      "props": {
+        "children": "Blue Shield Medicare members must use Member ID to register\n\n",
+        "full-width": false,
+        "id": "uoUEBaL2Wh",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "icon": "",
+      "id": "tkOlu93qRF",
+      "label": "Find me",
+      "subType": "",
+      "type": ""
+    }
+  ],
+  "screenId": "SC2wZLRac4n7k75YWHf7KqEevC9o3"
+}

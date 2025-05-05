@@ -1,0 +1,19 @@
+{
+  "componentsVersion": "",
+  "description": "",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "sso-config-request",
+  "references": {
+    "connectors": {
+      "SMTP Connector": "CI2wdnhxJLXxwDo1K9KT6At625GhX"
+    }
+  },
+  "screens": [],
+  "sharedInteractions": [
+    {
+      "id": "0.success",
+      "type": "success"
+    }
+  ]
+}

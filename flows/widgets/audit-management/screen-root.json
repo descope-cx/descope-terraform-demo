@@ -1,0 +1,401 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "headerContainer",
+        "grid"
+      ],
+      "props": {
+        "align": "center",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "grid": {
+      "custom": {},
+      "displayName": "Grid",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridOccurredColumn",
+        "gridUserIdColumn",
+        "gridActorColumn",
+        "gridLoginIdsColumn",
+        "gridRemoteAddressColumn",
+        "gridTypeColumn",
+        "gridActionColumn",
+        "gridItemDetailsColumn"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "column-reordering-allowed": true,
+        "data-id": "audit-table",
+        "size": "sm",
+        "st-host-height": "300px",
+        "style": {
+          "width": "100%"
+        }
+      },
+      "type": {
+        "resolvedName": "Grid"
+      }
+    },
+    "gridActionColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Action",
+        "path": "action",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridActorColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Actor",
+        "path": "actorId",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridItemDetailsColumn": {
+      "custom": {},
+      "displayName": "Grid Item Details Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "flex-grow": "0",
+        "frozen-to-end": true,
+        "sortable": false,
+        "width": "3.5em"
+      },
+      "type": {
+        "resolvedName": "GridItemDetailsColumn"
+      }
+    },
+    "gridLoginIdsColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Login IDs",
+        "path": "externalIds",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridOccurredColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Occurred",
+        "path": "occurredFormatted",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridRemoteAddressColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Remote Address",
+        "path": "remoteAddress",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridTypeColumn": {
+      "custom": {},
+      "displayName": "Grid Custom Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridTypeInfoBadge",
+        "gridTypeErrorBadge",
+        "gridTypeWarnBadge",
+        "gridTypeUnknownBadge"
+      ],
+      "parent": "grid",
+      "props": {
+        "header": "Type",
+        "path": "type",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridCustomColumn"
+      }
+    },
+    "gridTypeErrorBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridTypeColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "error",
+        "mode": "error",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridTypeInfoBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridTypeColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "info",
+        "mode": "primary",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridTypeUnknownBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridTypeColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "unknown",
+        "mode": "default",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridTypeWarnBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridTypeColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "warn",
+        "mode": "error",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridUserIdColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "User ID",
+        "path": "userId",
+        "resizable": true,
+        "sortable": false
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "headerContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "search",
+        "range"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "headerContainer",
+        "justify": "between",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "range": {
+      "custom": {},
+      "displayName": "Range",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "headerContainer",
+      "props": {
+        "bordered": true,
+        "data": [
+          {
+            "label": "Last 15 Minutes",
+            "value": "minuets15"
+          },
+          {
+            "label": "Last Hour",
+            "value": "hour"
+          },
+          {
+            "label": "Last 6 Hours",
+            "value": "hour6"
+          },
+          {
+            "label": "Last 24 Hours",
+            "value": "day"
+          },
+          {
+            "label": "Last 3 Days",
+            "value": "day3"
+          },
+          {
+            "label": "Last Week",
+            "value": "week"
+          },
+          {
+            "label": "Last 2 Weeks",
+            "value": "week2"
+          },
+          {
+            "label": "Last Month",
+            "value": "month"
+          }
+        ],
+        "data-id": "range-input",
+        "data-testid": "range-input",
+        "default-value": "day",
+        "full-width": false,
+        "id": "range",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "",
+        "max": 100,
+        "name": "",
+        "required": true,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "Select"
+      }
+    },
+    "search": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "headerContainer",
+      "props": {
+        "bordered": true,
+        "data-id": "search-input",
+        "data-testid": "search-input",
+        "full-width": false,
+        "id": "search",
+        "label": "",
+        "max": 100,
+        "name": "",
+        "placeholder": "Search",
+        "required": false,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    }
+  },
+  "screenId": "root"
+}

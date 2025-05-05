@@ -1,0 +1,295 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "titleText",
+        "loginIdInput",
+        "userDetailsHeader",
+        "nameInput",
+        "emailInput",
+        "phoneInput",
+        "rolesInput",
+        "buttonsContainer"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "3",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "createUserCancelButton",
+        "createUserSubmitButton"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "createUserCancelButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Cancel",
+        "color": "primary",
+        "data-id": "modal-cancel",
+        "data-testid": "create-user-modal-cancel",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createUserCancelButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "createUserSubmitButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Create",
+        "color": "primary",
+        "data-id": "modal-submit",
+        "data-testid": "create-user-modal-submit",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createUserSubmitButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "emailInput": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Email Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-errormessage-pattern-mismatch": "Must be a valid email",
+        "full-width": true,
+        "id": "emailInput",
+        "label": "Email",
+        "max": 100,
+        "name": "email",
+        "pattern": "^[\\w\\.\\%\\+\\-]+@[\\w\\.\\-]+\\.[A-Za-z]{2,}$",
+        "placeholder": "Not required if used as login ID",
+        "required": false,
+        "size": "sm",
+        "type": "email"
+      },
+      "type": {
+        "resolvedName": "EmailInput"
+      }
+    },
+    "loginIdInput": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "full-width": true,
+        "helper-text": "Used for identifying the user. Supports email or phone number.",
+        "id": "loginIdInput",
+        "label": "Login ID",
+        "max": 100,
+        "name": "loginId",
+        "placeholder": "Enter email or phone",
+        "required": true,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    },
+    "nameInput": {
+      "custom": {
+        "contextKey": "displayName",
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "border-radius": "sm",
+        "bordered": true,
+        "full-width": true,
+        "id": "nameInput",
+        "label": "Name",
+        "max": 100,
+        "name": "displayName",
+        "placeholder": "Enter name",
+        "required": false,
+        "size": "sm",
+        "type": "text"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    },
+    "phoneInput": {
+      "custom": {},
+      "displayName": "Phone Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "country-input-placeholder": "",
+        "data-errormessage-missing-value": "Required",
+        "data-errormessage-pattern-mismatch-too-short": "Please enter a valid phone",
+        "default-code": "autoDetect",
+        "full-width": true,
+        "id": "phoneInput",
+        "label": "Phone",
+        "maxlength": "20",
+        "minlength": "6",
+        "name": "phone",
+        "phone-input-placeholder": "Not required if used as login ID",
+        "size": "sm",
+        "type": "tel",
+        "variant": "countrySelection"
+      },
+      "type": {
+        "resolvedName": "Phone"
+      }
+    },
+    "rolesInput": {
+      "custom": {},
+      "displayName": "Roles Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-id": "roles-multiselect",
+        "full-width": true,
+        "id": "rolesInput",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "Roles",
+        "name": "roles",
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "MultiSelect"
+      }
+    },
+    "titleText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "New user",
+        "full-width": false,
+        "id": "titleText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "userDetailsHeader": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "User Details",
+        "full-width": false,
+        "id": "userDetailsHeader",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "create-user-modal"
+}

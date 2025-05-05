@@ -1,0 +1,48 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "appsList"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "appsList": {
+      "custom": {},
+      "displayName": "Apps list",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "emptyState": "Looks like there are no apps available yet...",
+        "size": "md",
+        "variant": "tiles"
+      },
+      "type": {
+        "resolvedName": "AppsList"
+      }
+    }
+  },
+  "screenId": "root"
+}

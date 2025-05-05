@@ -1,0 +1,21 @@
+{
+  "components": [
+    "access-key-management-widget-grid",
+    "access-key-management-widget-activate",
+    "access-key-management-widget-create",
+    "access-key-management-widget-deactivate",
+    "access-key-management-widget-delete"
+  ],
+  "description": "Delegate access key management to tenant admins",
+  "flowsIds": [],
+  "name": "Access Key Management Widget",
+  "screens": [
+    "activate-access-keys",
+    "create-access-key",
+    "created-access-key",
+    "deactivate-access-keys",
+    "delete-access-keys",
+    "root"
+  ],
+  "type": "access-key-management-widget"
+}

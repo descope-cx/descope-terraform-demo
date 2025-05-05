@@ -1,0 +1,28 @@
+{
+  "componentsVersion": "2.0.513",
+  "description": "Sign up using social login only. Registration information includes full name.",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "Sign Up",
+  "references": {
+    "connectors": {
+      "Radiant Logic": "CI2wYdYv29QMIXTv6bGoV6Odo9c7Y"
+    }
+  },
+  "screens": [
+    "already-enrolled-screen",
+    "create-password",
+    "mfa-selection-screen",
+    "registration",
+    "registration-screen",
+    "success",
+    "verify-otp",
+    "verify-totp"
+  ],
+  "sharedInteractions": [
+    {
+      "id": "4.success",
+      "type": "success"
+    }
+  ]
+}

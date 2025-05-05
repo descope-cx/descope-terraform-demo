@@ -1,0 +1,32 @@
+{
+  "enabled": false,
+  "lock": false,
+  "lockAttempts": 5,
+  "securityQuestions": [
+    {
+      "id": "SQ2pepFmh3waqv1jIVaFqduXvLlk2",
+      "text": "What was the name of your first pet?"
+    },
+    {
+      "id": "SQ2pepFmoIBkUYXUWrUIWlNNBjN9w",
+      "text": "What was the name of your elementary school?"
+    },
+    {
+      "id": "SQ2pepFndn1fX61sxWgUp1TCjvz2r",
+      "text": "What was your childhood nickname?"
+    },
+    {
+      "id": "SQ2pepFj2hWXN8VJnlfD5ftPPgLJl",
+      "text": "What is your favorite book?"
+    },
+    {
+      "id": "SQ2pepFiDF3Bo23bDQ8oY75Zbml5c",
+      "text": "What is your favorite movie?"
+    }
+  ],
+  "setupQuestionsCount": 1,
+  "tempLock": false,
+  "tempLockAttempts": 3,
+  "tempLockDuration": 5,
+  "verifyQuestionsCount": 1
+}

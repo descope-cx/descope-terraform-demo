@@ -1,0 +1,52 @@
+{
+  "cookiePolicy": 3,
+  "domain": "",
+  "enableInactivity": false,
+  "inactivityTime": 12,
+  "inactivityTimeUnit": "minutes",
+  "inviteEmailProviderId": "",
+  "inviteEmailTemplateId": "",
+  "inviteEmailTemplates": [
+    {
+      "emailBody": "\u003cb\u003eYou're invited to join {{projectName}}\u003c/b\u003e\n\u003cbr/\u003e\nClick on the link below to start your journey:\n\u003cbr/\u003e\n\u003ca href=\"{{inviteUrl}}\"\u003e{{inviteUrl}}\u003c/a\u003e",
+      "emailBodyPlainText": "You're invited to join {{projectName}}\nClick on the link below to start your journey:\n{{inviteUrl}}",
+      "emailSubject": "You have been invited to {{projectName}}",
+      "id": "System",
+      "name": "System",
+      "useEmailBodyPlainText": false
+    }
+  ],
+  "inviteExpirationTime": 0,
+  "inviteExpirationTimeUnit": "",
+  "inviteMagicLink": false,
+  "inviteSendEmail": true,
+  "inviteSendSms": false,
+  "inviteSmsProviderId": "",
+  "inviteSmsTemplateId": "",
+  "inviteSmsTemplates": [
+    {
+      "id": "System",
+      "name": "System",
+      "textMessageBody": "Click on the link below to complete your authentication to {{projectName}}:\n{{inviteUrl}}"
+    }
+  ],
+  "inviteUrl": "",
+  "keySessionTokenExpiration": 10,
+  "keySessionTokenExpirationUnit": "minutes",
+  "keyTemplateId": "",
+  "projectSelfProvisioning": true,
+  "refreshTokenExpiration": 4,
+  "refreshTokenExpirationUnit": "weeks",
+  "rotateJwt": false,
+  "sessionTokenExpiration": 10,
+  "sessionTokenExpirationUnit": "minutes",
+  "stepupTokenExpiration": 10,
+  "stepupTokenExpirationUnit": "minutes",
+  "testUserAllowFixedAuth": false,
+  "testUserFixedAuthToken": "",
+  "testUserFixedAuthVerifierRegex": "",
+  "testUserRegex": "",
+  "tokenResponseMethod": "onBody",
+  "trustedDomains": "",
+  "userTemplateId": ""
+}

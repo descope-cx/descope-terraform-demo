@@ -1,0 +1,10 @@
+{
+  "flows": [
+    "add-passkeys",
+    "sign-in",
+    "sign-up",
+    "sign-up-or-in",
+    "sso-config-request",
+    "step-up"
+  ]
+}

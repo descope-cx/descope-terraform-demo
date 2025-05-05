@@ -1,0 +1,20 @@
+{
+  "componentsVersion": "2.0.516",
+  "description": "Sign up or in using social login only.",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "Sign Up or In",
+  "screens": [
+    "welcome-screen"
+  ],
+  "sharedInteractions": [
+    {
+      "id": "5.success",
+      "type": "success"
+    },
+    {
+      "id": "14.3",
+      "label": "End"
+    }
+  ]
+}

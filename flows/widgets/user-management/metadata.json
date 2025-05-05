@@ -1,0 +1,27 @@
+{
+  "components": [
+    "user-management-widget-grid",
+    "user-management-widget-edit",
+    "user-management-widget-create",
+    "user-management-widget-delete",
+    "user-management-widget-enable",
+    "user-management-widget-disable",
+    "user-management-widget-remove-passkey",
+    "user-management-widget-reset-password"
+  ],
+  "description": "Delegate user management to tenant admins",
+  "flowsIds": [],
+  "name": "User Management Widget",
+  "screens": [
+    "create-user",
+    "delete-users",
+    "disable-user",
+    "edit-user",
+    "enable-user",
+    "generated-password",
+    "remove-passkey",
+    "reset-password",
+    "root"
+  ],
+  "type": "user-management-widget"
+}

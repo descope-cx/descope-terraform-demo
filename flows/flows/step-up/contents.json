@@ -1,0 +1,427 @@
+{
+  "startTask": "6",
+  "tasks": {
+    "0": {
+      "calculatedInputKeys": true,
+      "id": "0",
+      "name": "Step Up",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "RjDwpwlzq6",
+            "taskId": "7"
+          },
+          {
+            "interactionId": "_sdk4uxqDk",
+            "taskId": "7"
+          }
+        ]
+      },
+      "screenId": "SC2wWTjqqQ7nlkC1eSi1flgNzw5ua",
+      "type": "screen",
+      "view": {
+        "x": 1224,
+        "y": 504
+      }
+    },
+    "10": {
+      "action": "oauth-start-sign-in",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": true
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": "google"
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "10.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "errorHandlingV2": {
+        "OAuthExchangeCodeFailed": {
+          "errorHandlingType": "automatic"
+        },
+        "OAuthStartFailed": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "10",
+      "name": "Sign In / OAuth - Google",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "10.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 12
+      }
+    },
+    "10.end": {
+      "action": "exchange-oauth-code",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": true
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": "google"
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "10.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "errorHandlingV2": {
+        "OAuthExchangeCodeFailed": {
+          "errorHandlingType": "automatic"
+        },
+        "OAuthStartFailed": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "10.end",
+      "name": "Sign In / OAuth - Google",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "5"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 12
+      }
+    },
+    "5": {
+      "action": "logged-in",
+      "id": "5",
+      "name": "Generate JWT",
+      "next": {},
+      "type": "automated",
+      "view": {
+        "x": 2196,
+        "y": 384
+      }
+    },
+    "6": {
+      "action": "loadUser",
+      "id": "6",
+      "name": "Step Up",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "6.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 264,
+        "y": 228
+      }
+    },
+    "6.end": {
+      "action": "step-up",
+      "id": "6.end",
+      "name": "Step Up",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "8"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 264,
+        "y": 228
+      }
+    },
+    "7": {
+      "action": "oauth-start-sign-in",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": ""
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": ""
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "7.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "7",
+      "name": "Sign In / OAuth",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "7.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 528
+      }
+    },
+    "7.end": {
+      "action": "exchange-oauth-code",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": ""
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": ""
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "7.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "7.end",
+      "name": "Sign In / OAuth",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "5"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 528
+      }
+    },
+    "8": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "is-true",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "user.oauth.google"
+              }
+            }
+          ],
+          "interactionId": "8i3m9aysw6w",
+          "name": "Google "
+        },
+        {
+          "atomicConditions": [
+            {
+              "operator": "is-true",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "user.oauth.microsoft"
+              }
+            }
+          ],
+          "interactionId": "rdifnp2fzpe",
+          "name": "Microsoft"
+        },
+        {
+          "interactionId": "ELSE",
+          "name": "Else"
+        }
+      ],
+      "id": "8",
+      "name": "Condition",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "8i3m9aysw6w",
+            "taskId": "10"
+          },
+          {
+            "interactionId": "rdifnp2fzpe",
+            "taskId": "9"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "0"
+          }
+        ]
+      },
+      "type": "condition",
+      "view": {
+        "x": 744,
+        "y": 204
+      }
+    },
+    "9": {
+      "action": "oauth-start-sign-in",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": true
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": "microsoft"
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "9.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "errorHandlingV2": {
+        "OAuthExchangeCodeFailed": {
+          "errorHandlingType": "automatic"
+        },
+        "OAuthStartFailed": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "9",
+      "name": "Sign In / OAuth - Microsoft",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "9.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 276
+      }
+    },
+    "9.end": {
+      "action": "exchange-oauth-code",
+      "arguments": {
+        "allowSetDefaultProvider": {
+          "type": "inline",
+          "value": true
+        },
+        "defaultProvider": {
+          "type": "inline",
+          "value": "microsoft"
+        },
+        "exchangeStepId": {
+          "type": "inline",
+          "value": "9.end"
+        },
+        "prompt": {
+          "type": "inline",
+          "value": []
+        },
+        "redirectUrl": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "errorHandlingV2": {
+        "OAuthExchangeCodeFailed": {
+          "errorHandlingType": "automatic"
+        },
+        "OAuthStartFailed": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "9.end",
+      "name": "Sign In / OAuth - Microsoft",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "5"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1668,
+        "y": 276
+      }
+    },
+    "start": {
+      "id": "start",
+      "name": "start",
+      "next": {
+        "rules": [
+          {
+            "taskId": "6"
+          }
+        ]
+      },
+      "view": {
+        "x": 12,
+        "y": 276
+      }
+    }
+  }
+}

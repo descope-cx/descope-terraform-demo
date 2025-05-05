@@ -1,0 +1,18 @@
+{
+  "emailServiceProvider": "Descope",
+  "emailTemplates": [
+    {
+      "active": true,
+      "body": "asset:body-8e4b5e85070043892797b6b8122d386fa74083b1448c11137c90799f3e606096.html",
+      "bodyPlainText": "Click on the correct link below to complete your authentication to {{.projectName}}:\n{{.redirectUrlKey1}} -\u003e {{.redirectUrl1}}\n{{.redirectUrlKey2}} -\u003e {{.redirectUrl2}}\n{{.redirectUrlKey3}} -\u003e {{.redirectUrl3}}\n\nThe link above will expire in {{.expirationTime}} minutes.",
+      "subject": "Authenticate with {{.projectName}}",
+      "useBodyPlainText": false
+    }
+  ],
+  "enabled": true,
+  "expirationTime": 3,
+  "expirationTimeUnit": "minutes",
+  "rateLimitRetries": 3,
+  "rateLimitTimeframe": 60,
+  "redirectUrl": ""
+}

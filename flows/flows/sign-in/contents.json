@@ -1,0 +1,446 @@
+{
+  "startTask": "12",
+  "tasks": {
+    "10": {
+      "allInputKeys": [
+        "code"
+      ],
+      "calculatedInputKeys": true,
+      "id": "10",
+      "inputsMetadata": [
+        {
+          "displayName": "One Time Code",
+          "key": "code"
+        }
+      ],
+      "name": "Verify TOTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "oneTimeCodeId",
+            "taskId": "11"
+          }
+        ]
+      },
+      "screenId": "SC2wZNBaG19JLoesw1Fxfwd7rPUUT",
+      "type": "screen",
+      "view": {
+        "x": 3180,
+        "y": 528
+      }
+    },
+    "11": {
+      "action": "verify-totp-code",
+      "id": "11",
+      "name": "Verify Code / TOTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "3"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 3660,
+        "y": 564
+      }
+    },
+    "12": {
+      "action": "risk",
+      "id": "12",
+      "name": "Fingerprint / Assess",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "13"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 276,
+        "y": 156
+      }
+    },
+    "13": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "is-true",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "riskInfo.botDetected"
+              }
+            }
+          ],
+          "interactionId": "nxxr93g0gfs",
+          "name": "Bot Detected"
+        },
+        {
+          "atomicConditions": [
+            {
+              "operator": "greater-than",
+              "predicate": {
+                "type": "inline",
+                "value": 50
+              },
+              "target": {
+                "type": "context",
+                "value": "riskInfo.riskScore"
+              }
+            }
+          ],
+          "interactionId": "1yhbdlz0aprh",
+          "name": "Risk Score \u003e 50"
+        },
+        {
+          "atomicConditions": [
+            {
+              "operator": "is-true",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "riskInfo.impossibleTravel"
+              }
+            }
+          ],
+          "interactionId": "p06uunlt08l",
+          "name": "Impossible Traveler"
+        },
+        {
+          "atomicConditions": [],
+          "interactionId": "ELSE",
+          "name": "No Risks"
+        }
+      ],
+      "errorHandlingV2": {},
+      "id": "13",
+      "name": "Any risk detected?",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "nxxr93g0gfs",
+            "taskId": "14"
+          },
+          {
+            "interactionId": "1yhbdlz0aprh",
+            "taskId": "5"
+          },
+          {
+            "interactionId": "p06uunlt08l",
+            "taskId": "5"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "15"
+          }
+        ]
+      },
+      "type": "condition",
+      "view": {
+        "x": 756,
+        "y": 108
+      }
+    },
+    "14": {
+      "calculatedInputKeys": true,
+      "id": "14",
+      "inputsMetadata": [],
+      "name": "Bot Detected",
+      "next": {},
+      "screenId": "SC2wZNUHVNT89BnzbXVMZj9N09Qdr",
+      "type": "screen",
+      "view": {
+        "x": 1236,
+        "y": 12
+      }
+    },
+    "15": {
+      "action": "password-sign-in-v2",
+      "errorHandlingV2": {
+        "PasswordExpired": {
+          "errorHandlingType": "custom"
+        }
+      },
+      "id": "15",
+      "name": "Sign In / Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "3"
+          },
+          {
+            "interactionId": "PasswordExpired",
+            "taskId": "16"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1236,
+        "y": 540
+      }
+    },
+    "16": {
+      "id": "16",
+      "inputsMetadata": [
+        {
+          "displayName": "New Password",
+          "key": "newPassword"
+        },
+        {
+          "displayName": "Login Password",
+          "key": "password"
+        }
+      ],
+      "name": "Replace Expired Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "update-password",
+            "taskId": "17"
+          }
+        ]
+      },
+      "screenId": "SC2wZNUGGEcWBw3H4wxKCUN3vitTB",
+      "type": "screen",
+      "view": {
+        "x": 1728,
+        "y": 564
+      }
+    },
+    "17": {
+      "action": "password-replace",
+      "id": "17",
+      "name": "Replace Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "3"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 2688,
+        "y": 600
+      }
+    },
+    "3": {
+      "action": "logged-in",
+      "id": "3",
+      "name": "End",
+      "next": {},
+      "type": "automated",
+      "view": {
+        "x": 4140,
+        "y": 636
+      }
+    },
+    "5": {
+      "action": "password-sign-in-v2",
+      "errorHandlingV2": {
+        "PasswordExpired": {
+          "errorHandlingType": "custom"
+        }
+      },
+      "id": "5",
+      "name": "Sign In / Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "8"
+          },
+          {
+            "interactionId": "PasswordExpired",
+            "taskId": "6"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1236,
+        "y": 204
+      }
+    },
+    "6": {
+      "id": "6",
+      "inputsMetadata": [
+        {
+          "displayName": "New Password",
+          "key": "newPassword"
+        },
+        {
+          "displayName": "Login Password",
+          "key": "password"
+        }
+      ],
+      "name": "Replace Expired Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "update-password",
+            "taskId": "7"
+          }
+        ]
+      },
+      "screenId": "SC2wWY2qAjIHsqFWp5qWBFjHUvMOZ",
+      "type": "screen",
+      "view": {
+        "x": 1728,
+        "y": 276
+      }
+    },
+    "7": {
+      "action": "password-replace",
+      "id": "7",
+      "name": "Replace Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "8"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 2208,
+        "y": 300
+      }
+    },
+    "8": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "equal",
+              "predicate": {
+                "type": "inline",
+                "value": "Passkeys"
+              },
+              "target": {
+                "type": "context",
+                "value": "user.customAttributes.preferredMfa"
+              }
+            }
+          ],
+          "interactionId": "ckvwyd7aqi",
+          "logicalOr": false,
+          "name": "Passkeys"
+        },
+        {
+          "atomicConditions": [],
+          "interactionId": "ELSE",
+          "name": "TOTP"
+        }
+      ],
+      "errorHandlingV2": {},
+      "id": "8",
+      "name": "What is user's preferred MFA method?",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "ckvwyd7aqi",
+            "taskId": "9"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "10"
+          }
+        ]
+      },
+      "type": "condition",
+      "view": {
+        "x": 2688,
+        "y": 312
+      }
+    },
+    "9": {
+      "action": "webauthn-sign-in-start",
+      "arguments": {
+        "finishStepId": {
+          "type": "inline",
+          "value": "9.end"
+        },
+        "userVerificationDiscouraged": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "9",
+      "name": "Sign In / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "9.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 3660,
+        "y": 324
+      }
+    },
+    "9.end": {
+      "action": "webauthn-sign-in-finish",
+      "arguments": {
+        "finishStepId": {
+          "type": "inline",
+          "value": "9.end"
+        },
+        "userVerificationDiscouraged": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "9.end",
+      "name": "Sign In / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "3"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 3660,
+        "y": 324
+      }
+    },
+    "start": {
+      "id": "start",
+      "name": "start",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "",
+            "taskId": "12"
+          }
+        ]
+      },
+      "view": {
+        "x": 12,
+        "y": 216
+      }
+    }
+  }
+}

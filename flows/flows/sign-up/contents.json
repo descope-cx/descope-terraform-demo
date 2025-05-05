@@ -1,0 +1,630 @@
+{
+  "startTask": "12",
+  "tasks": {
+    "0": {
+      "allInputKeys": [
+        "email",
+        "externalId",
+        "firstName",
+        "lastName"
+      ],
+      "calculatedInputKeys": true,
+      "id": "0",
+      "inputKeys": [
+        "email",
+        "externalId",
+        "firstName",
+        "lastName"
+      ],
+      "inputsMetadata": [
+        {
+          "displayName": "Email Input",
+          "key": "email"
+        },
+        {
+          "displayName": "Last Name Input",
+          "key": "lastName"
+        },
+        {
+          "displayName": "Custom Login ID Input",
+          "key": "externalId"
+        },
+        {
+          "displayName": "First Name Input",
+          "key": "firstName"
+        }
+      ],
+      "name": "Registration",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "FFZJmFsDd2",
+            "taskId": "5"
+          }
+        ]
+      },
+      "screenId": "SC2wWTjmln2KzMvkx2Wk5L2VGNBQK",
+      "type": "screen",
+      "view": {
+        "x": 1728,
+        "y": 72
+      }
+    },
+    "10": {
+      "calculatedInputKeys": true,
+      "id": "10",
+      "inputsMetadata": [],
+      "name": "Success",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "iS21Xuzoeu",
+            "taskId": "4"
+          }
+        ]
+      },
+      "screenId": "SC2wWZcPkBKmaAQDaaOn4HjswJgyU",
+      "type": "screen",
+      "view": {
+        "x": 7536,
+        "y": 456
+      }
+    },
+    "11": {
+      "action": "connector",
+      "arguments": {
+        "args": {
+          "type": "inline",
+          "value": [
+            {
+              "key": "endpoint",
+              "type": "string",
+              "value": "/api/user"
+            },
+            {
+              "key": "timeout",
+              "type": "number",
+              "value": 3
+            },
+            {
+              "key": "payload",
+              "type": "string",
+              "value": "{\n  \"email\" : \"{{unauthUser.email}}\"\n}"
+            }
+          ]
+        },
+        "async": {
+          "type": "inline",
+          "value": false
+        },
+        "command": {
+          "type": "inline",
+          "value": "post"
+        },
+        "connectorId": {
+          "type": "inline",
+          "value": "CI2wYdYv29QMIXTv6bGoV6Odo9c7Y"
+        },
+        "resultPath": {
+          "type": "inline",
+          "value": "httpResult"
+        },
+        "templateId": {
+          "type": "inline",
+          "value": "http"
+        }
+      },
+      "errorHandlingV2": {
+        "ConnectorFailed": {
+          "errorHandlingType": "automatic"
+        },
+        "request_error": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "11",
+      "name": "Check Radiant Logic for User",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "0"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1236,
+        "y": 48
+      }
+    },
+    "12": {
+      "calculatedInputKeys": true,
+      "id": "12",
+      "inputKeys": [
+        ""
+      ],
+      "inputsMetadata": [],
+      "name": "Registration Screen",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "tkOlu93qRF",
+            "taskId": "14"
+          }
+        ]
+      },
+      "screenId": "SC2wZLRac4n7k75YWHf7KqEevC9o3",
+      "type": "screen",
+      "view": {
+        "x": 276,
+        "y": 12
+      }
+    },
+    "13": {
+      "allInputKeys": [
+        "form.mfaMethod"
+      ],
+      "calculatedInputKeys": true,
+      "id": "13",
+      "inputKeys": [
+        "form.mfaMethod"
+      ],
+      "inputsMetadata": [
+        {
+          "displayName": "Single Select",
+          "key": "form.mfaMethod"
+        }
+      ],
+      "name": "MFA Selection Screen",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "c4RzUGaBbs",
+            "taskId": "16"
+          }
+        ]
+      },
+      "screenId": "SC2wZLRWrLwN4WsqdWf1h22llS61S",
+      "type": "screen",
+      "view": {
+        "x": 4632,
+        "y": 264
+      }
+    },
+    "14": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "empty",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "unauthUser.loginIds"
+              }
+            }
+          ],
+          "interactionId": "a4aqa17y2nw",
+          "logicalOr": false,
+          "name": "New User"
+        },
+        {
+          "atomicConditions": [],
+          "interactionId": "ELSE",
+          "name": "Existing User"
+        }
+      ],
+      "errorHandlingV2": {},
+      "id": "14",
+      "name": "Is this a new user?",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "a4aqa17y2nw",
+            "taskId": "11"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "15"
+          }
+        ]
+      },
+      "type": "condition",
+      "view": {
+        "x": 756,
+        "y": 12
+      }
+    },
+    "15": {
+      "calculatedInputKeys": true,
+      "id": "15",
+      "inputsMetadata": [],
+      "name": "Already Enrolled Screen",
+      "next": {},
+      "screenId": "SC2wZLerQxcJts1otg9c8mriMJFeT",
+      "type": "screen",
+      "view": {
+        "x": 1236,
+        "y": 288
+      }
+    },
+    "16": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "equal",
+              "predicate": {
+                "type": "inline",
+                "value": "Passkeys"
+              },
+              "target": {
+                "type": "context",
+                "value": "form.mfaMethod"
+              }
+            }
+          ],
+          "interactionId": "goe884ylvw",
+          "logicalOr": false,
+          "name": "Passkeys"
+        },
+        {
+          "atomicConditions": [],
+          "interactionId": "ELSE",
+          "name": "TOTP (Authenticator Apps)"
+        }
+      ],
+      "errorHandlingV2": {},
+      "id": "16",
+      "name": "What is the preferred MFA method?",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "goe884ylvw",
+            "taskId": "17"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "18"
+          }
+        ]
+      },
+      "type": "condition",
+      "view": {
+        "x": 5112,
+        "y": 264
+      }
+    },
+    "17": {
+      "action": "webauthn-update-user-start",
+      "arguments": {
+        "finishStepId": {
+          "type": "inline",
+          "value": "17.end"
+        },
+        "restrictPasskeyTypes": {
+          "type": "inline",
+          "value": ""
+        },
+        "userVerificationDiscouraged": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "17",
+      "name": "Update User / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "17.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 6084,
+        "y": 132
+      }
+    },
+    "17.end": {
+      "action": "webauthn-update-user-finish",
+      "arguments": {
+        "finishStepId": {
+          "type": "inline",
+          "value": "17.end"
+        },
+        "restrictPasskeyTypes": {
+          "type": "inline",
+          "value": ""
+        },
+        "userVerificationDiscouraged": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "17.end",
+      "name": "Update User / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "21"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 6084,
+        "y": 132
+      }
+    },
+    "18": {
+      "action": "update-user-totp",
+      "id": "18",
+      "name": "Update User / TOTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "19"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 5592,
+        "y": 336
+      }
+    },
+    "19": {
+      "allInputKeys": [
+        "code"
+      ],
+      "calculatedInputKeys": true,
+      "id": "19",
+      "inputsMetadata": [
+        {
+          "displayName": "One Time Code",
+          "key": "code"
+        }
+      ],
+      "name": "Verify TOTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "oneTimeCodeId",
+            "taskId": "20"
+          }
+        ]
+      },
+      "screenId": "SC2wZM1Qlbhs7x5EhKGep9TjVi5vD",
+      "type": "screen",
+      "view": {
+        "x": 6084,
+        "y": 372
+      }
+    },
+    "20": {
+      "action": "verify-totp-code",
+      "id": "20",
+      "name": "Verify Code / TOTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "21"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 6564,
+        "y": 396
+      }
+    },
+    "21": {
+      "action": "update-user-properties",
+      "arguments": {
+        "userPropertiesDefinitions": {
+          "type": "inline",
+          "value": [
+            {
+              "key": "customAttributes.preferredMfa",
+              "type": "context",
+              "value": "form.mfaMethod"
+            }
+          ]
+        }
+      },
+      "errorHandlingV2": {
+        "UpdateUserPropertiesFailed": {
+          "errorHandlingType": "automatic"
+        }
+      },
+      "id": "21",
+      "name": "Save Preferred MFA Method",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "10"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 7044,
+        "y": 432
+      }
+    },
+    "4": {
+      "action": "logged-in",
+      "id": "4",
+      "name": "End",
+      "next": {},
+      "type": "automated",
+      "view": {
+        "x": 8016,
+        "y": 528
+      }
+    },
+    "5": {
+      "action": "sign-up-otp-email",
+      "arguments": {
+        "extraTemplateVals": {
+          "type": "inline",
+          "value": ""
+        },
+        "providerId": {
+          "type": "inline",
+          "value": ""
+        },
+        "templateId": {
+          "type": "inline",
+          "value": ""
+        }
+      },
+      "id": "5",
+      "name": "Sign Up / OTP / Email",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "6"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 2208,
+        "y": 108
+      }
+    },
+    "6": {
+      "allInputKeys": [
+        "code"
+      ],
+      "calculatedInputKeys": true,
+      "contextKeys": [
+        "sentTo.maskedEmail"
+      ],
+      "id": "6",
+      "inputsMetadata": [
+        {
+          "displayName": "One Time Code",
+          "key": "code"
+        }
+      ],
+      "name": "Verify OTP",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "resend",
+            "taskId": "5"
+          },
+          {
+            "interactionId": "oneTimeCodeId",
+            "taskId": "7"
+          }
+        ]
+      },
+      "screenId": "SC2wWZSgPanZDGGRdhuc6GLx2eN4p",
+      "type": "screen",
+      "view": {
+        "x": 2688,
+        "y": 108
+      }
+    },
+    "7": {
+      "action": "verify-code-otp-email",
+      "id": "7",
+      "name": "Verify Code / OTP / Email",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "8"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 3180,
+        "y": 168
+      }
+    },
+    "8": {
+      "allInputKeys": [
+        "newPassword"
+      ],
+      "calculatedInputKeys": true,
+      "contextKeys": [
+        "pswdPolicy"
+      ],
+      "id": "8",
+      "inputKeys": [
+        "newPassword"
+      ],
+      "inputsMetadata": [
+        {
+          "displayName": "New Password",
+          "key": "newPassword"
+        }
+      ],
+      "name": "Create Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "iS21Xuzoeu",
+            "taskId": "9"
+          }
+        ]
+      },
+      "screenId": "SC2wWZSjiBaKluGJKDJIV6nFtEoHi",
+      "type": "screen",
+      "view": {
+        "x": 3660,
+        "y": 204
+      }
+    },
+    "9": {
+      "action": "password-update",
+      "id": "9",
+      "name": "Update Password",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "13"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 4140,
+        "y": 228
+      }
+    },
+    "start": {
+      "id": "start",
+      "name": "start",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "",
+            "taskId": "12"
+          }
+        ]
+      },
+      "view": {
+        "x": 12,
+        "y": 72
+      }
+    }
+  }
+}

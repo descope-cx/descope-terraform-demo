@@ -1,0 +1,9 @@
+{
+  "componentsVersion": "2.0.516",
+  "styles": [
+    "dark",
+    "light",
+    "sso-suite-default-dark",
+    "sso-suite-default-light"
+  ]
+}

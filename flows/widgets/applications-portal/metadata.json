@@ -1,0 +1,12 @@
+{
+  "components": [
+    "applications-portal-widget-apps-list"
+  ],
+  "description": "Allow end users to view and choose applications",
+  "flowsIds": [],
+  "name": "Applications Portal Widget",
+  "screens": [
+    "root"
+  ],
+  "type": "applications-portal-widget"
+}

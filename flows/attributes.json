@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "displayName": "memberId",
+      "editPermissions": [],
+      "name": "memberId",
+      "options": [],
+      "type": "string",
+      "viewPermissions": []
+    },
+    {
+      "displayName": "Preferred MFA",
+      "editPermissions": [],
+      "name": "preferredMfa",
+      "options": [],
+      "type": "string",
+      "viewPermissions": []
+    }
+  ]
+}

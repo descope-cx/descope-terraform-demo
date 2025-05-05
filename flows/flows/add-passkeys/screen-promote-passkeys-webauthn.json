@@ -1,0 +1,207 @@
+{
+  "contents": {
+    "1y66riK7z-": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Configure Passkeys (WebAuthn)?",
+        "full-width": false,
+        "id": "1y66riK7z-",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "h3"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "1y66riK7z-",
+        "lERVhcQ0Ds",
+        "hOo5GtSbzF",
+        "n-4gtiiERZ",
+        "iwQqOL4mn0"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "8",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "aJcUrl9Fu0": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Passkey Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "n-4gtiiERZ",
+      "props": {
+        "children": "Add passkeys (WebAuthn)",
+        "data-type": "biometrics",
+        "formNoValidate": false,
+        "full-width": true,
+        "id": "aJcUrl9Fu0",
+        "mode": "primary",
+        "size": "md",
+        "startIcon": "passkey",
+        "startIconColorText": true,
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "BiometricsButton"
+      }
+    },
+    "bZWqIar1da": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "n-4gtiiERZ",
+      "props": {
+        "children": "Not now, maybe later",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": true,
+        "id": "bZWqIar1da",
+        "mode": "primary",
+        "size": "md",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "hOo5GtSbzF": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Passkeys (WebAuthn) recognition will make it easier for you to sign in!",
+        "full-width": false,
+        "id": "hOo5GtSbzF",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "iwQqOL4mn0": {
+      "custom": {},
+      "displayName": "Error Message",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "data-type": "error-message",
+        "full-width": false,
+        "id": "iwQqOL4mn0",
+        "italic": false,
+        "mode": "error",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "ErrorMessage"
+      }
+    },
+    "lERVhcQ0Ds": {
+      "custom": {},
+      "displayName": "Image",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "alt": "Image",
+        "id": "lERVhcQ0Ds",
+        "src": "https://imgs.descope.com/flows/common/v1/fingerprint.svg"
+      },
+      "type": {
+        "resolvedName": "Image"
+      }
+    },
+    "n-4gtiiERZ": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "aJcUrl9Fu0",
+        "bZWqIar1da"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "center",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "n-4gtiiERZ",
+        "justify": "start",
+        "paddingX": "4",
+        "paddingY": "4",
+        "spaceBetween": "1.5",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "icon": "passkey",
+      "id": "aJcUrl9Fu0",
+      "label": "Add passkeys (WebAuthn)",
+      "subType": "",
+      "type": ""
+    },
+    {
+      "icon": "",
+      "id": "bZWqIar1da",
+      "label": "Not now, maybe later",
+      "subType": "",
+      "type": ""
+    }
+  ],
+  "screenId": "SC2wWOW9XKjsD5FjKVMAHtuGIYM8S"
+}

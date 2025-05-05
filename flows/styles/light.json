@@ -1,0 +1,49 @@
+{
+  "components": {
+    "button": {
+      "mode": {
+        "primary": {
+          "--descope-button-border-radius": "var(--descope-radius-xl)"
+        }
+      }
+    },
+    "inputWrapper": {
+      "--descope-input-wrapper-border-radius": "var(--descope-radius-md)"
+    },
+    "logo": {
+      "--descope-logo-url": "asset:img-5486e05798271b38b112210c21a2932dbcacaf97bcd191fe0417ac77dd934dbb.svg"
+    }
+  },
+  "globals": {
+    "colors": {
+      "primary": {
+        "contrast": "#FFFFFF",
+        "dark": "#004471",
+        "highlight": "#53BBFF",
+        "light": "#089DFF",
+        "main": "#0071BCFF"
+      }
+    },
+    "fonts": {
+      "font1": {
+        "family": [
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji"
+        ],
+        "label": "Sans Serif"
+      }
+    }
+  }
+}

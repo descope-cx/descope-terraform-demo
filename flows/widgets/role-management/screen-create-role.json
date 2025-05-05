@@ -1,0 +1,217 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "titleText",
+        "nameInput",
+        "descriptionInput",
+        "permissionsInput",
+        "buttonsContainer"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "2",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "createRoleCancelButton",
+        "createRoleSubmitButton"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "createRoleCancelButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Cancel",
+        "color": "primary",
+        "data-id": "modal-cancel",
+        "data-testid": "create-role-modal-cancel",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createRoleCancelButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "createRoleSubmitButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Create",
+        "color": "primary",
+        "data-id": "modal-submit",
+        "data-testid": "create-role-modal-submit",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createRoleSubmitButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "descriptionInput": {
+      "custom": {
+        "contextKey": "roleDescription",
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "border-radius": "sm",
+        "bordered": true,
+        "full-width": true,
+        "id": "roleDescription",
+        "label": "Description",
+        "max": 100,
+        "name": "description",
+        "placeholder": "Description",
+        "required": false,
+        "size": "sm",
+        "type": "text"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    },
+    "nameInput": {
+      "custom": {
+        "contextKey": "roleName",
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "border-radius": "sm",
+        "bordered": true,
+        "full-width": true,
+        "id": "nameInput",
+        "label": "Name",
+        "max": 100,
+        "name": "name",
+        "placeholder": "Name",
+        "required": false,
+        "size": "sm",
+        "type": "text"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    },
+    "permissionsInput": {
+      "custom": {},
+      "displayName": "Permissions Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-id": "permissions-multiselect",
+        "data-testid": "permissions-multiselect",
+        "full-width": true,
+        "id": "permissionsInput",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "Permissions",
+        "name": "permissionNames",
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "MultiSelect"
+      }
+    },
+    "titleText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "New role",
+        "full-width": false,
+        "id": "titleText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "create-role-modal"
+}

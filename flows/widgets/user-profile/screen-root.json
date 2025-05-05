@@ -1,0 +1,373 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "avatarContainer",
+        "userAttrsContainer",
+        "divider1",
+        "authMethodsContainer",
+        "divider2",
+        "logoutContainer"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "authMethodsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "authMethodsTitle",
+        "passkeyAuthMethod",
+        "passwordAuthMethod"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "authMethodsContainer",
+        "justify": "start",
+        "paddingX": "0",
+        "paddingY": "4",
+        "spaceBetween": "8",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "authMethodsTitle": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "authMethodsContainer",
+      "props": {
+        "children": "Authentication Methods",
+        "full-width": false,
+        "id": "authMethodsTitle",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "avatar": {
+      "custom": {},
+      "displayName": "Avatar",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "avatarContainer",
+      "props": {
+        "data-id": "avatar",
+        "editable": "true",
+        "flow-id": "user-profile-set-picture",
+        "size": "lg"
+      },
+      "type": {
+        "resolvedName": "Avatar"
+      }
+    },
+    "avatarContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "avatar"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "avatarContainer",
+        "justify": "start",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "divider1": {
+      "custom": {},
+      "displayName": "Divider",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "",
+        "id": "divider1",
+        "italic": false,
+        "mode": "primary",
+        "variant": "body1",
+        "vertical": false
+      },
+      "type": {
+        "resolvedName": "Divider"
+      }
+    },
+    "divider2": {
+      "custom": {},
+      "displayName": "Divider",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "",
+        "id": "divider2",
+        "italic": false,
+        "mode": "primary",
+        "variant": "body1",
+        "vertical": false
+      },
+      "type": {
+        "resolvedName": "Divider"
+      }
+    },
+    "emailUserAttr": {
+      "custom": {},
+      "displayName": "User Email Attribute",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "userAttrsContainer",
+      "props": {
+        "data-id": "email",
+        "delete-flow-id": "user-profile-delete-email",
+        "edit-flow-id": "user-profile-set-email",
+        "full-width": "true",
+        "label": "Email",
+        "placeholder": "Add an email"
+      },
+      "type": {
+        "resolvedName": "EmailUserAttribute"
+      }
+    },
+    "logoutBtn": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "logoutContainer",
+      "props": {
+        "auto-submit": true,
+        "children": "Logout",
+        "data-id": "logout",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "logoutBtn",
+        "mode": "error",
+        "shape": "",
+        "size": "lg",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "LogoutButton"
+      }
+    },
+    "logoutContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "logoutBtn"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "logoutContainer",
+        "justify": "start",
+        "paddingX": "0",
+        "paddingY": "4",
+        "spaceBetween": "8",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "nameUserAttr": {
+      "custom": {},
+      "displayName": "Name User Attribute",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "userAttrsContainer",
+      "props": {
+        "data-id": "name",
+        "delete-flow-id": "user-profile-delete-name",
+        "edit-flow-id": "user-profile-set-name",
+        "full-width": "true",
+        "label": "Name"
+      },
+      "type": {
+        "resolvedName": "NameUserAttribute"
+      }
+    },
+    "passkeyAuthMethod": {
+      "custom": {},
+      "displayName": "Passkey Authentication Method",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "authMethodsContainer",
+      "props": {
+        "button-label": "Add",
+        "buttonIcon": "plus",
+        "data-id": "passkey",
+        "flow-id": "user-profile-set-passkeys",
+        "full-width": "true",
+        "label": "Passkey",
+        "methodIcon": "fingerprint"
+      },
+      "type": {
+        "resolvedName": "PasskeyUserAuthMethod"
+      }
+    },
+    "passwordAuthMethod": {
+      "custom": {},
+      "displayName": "Password Authentication Method",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "authMethodsContainer",
+      "props": {
+        "button-label": "Reset password",
+        "buttonIcon": "reload",
+        "data-id": "password",
+        "flow-id": "user-profile-reset-password",
+        "full-width": "true",
+        "label": "Password",
+        "methodIcon": "password"
+      },
+      "type": {
+        "resolvedName": "PasswordUserAuthMethod"
+      }
+    },
+    "phoneUserAttr": {
+      "custom": {},
+      "displayName": "User Phone Attribute",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "userAttrsContainer",
+      "props": {
+        "data-id": "phone",
+        "delete-flow-id": "user-profile-delete-phone",
+        "edit-flow-id": "user-profile-set-phone",
+        "full-width": "true",
+        "label": "Phone",
+        "placeholder": "Add a phone number"
+      },
+      "type": {
+        "resolvedName": "PhoneUserAttribute"
+      }
+    },
+    "userAttrsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "userAttrsTitle",
+        "emailUserAttr",
+        "nameUserAttr",
+        "phoneUserAttr"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "userAttrsContainer",
+        "justify": "start",
+        "paddingX": "0",
+        "paddingY": "4",
+        "spaceBetween": "8",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "userAttrsTitle": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "userAttrsContainer",
+      "props": {
+        "children": "Personal Information",
+        "full-width": false,
+        "id": "userAttrsTitle",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "root"
+}

@@ -1,0 +1,348 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "headerContainer",
+        "grid"
+      ],
+      "props": {
+        "align": "center",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "space-between": "md",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "deleteRoles",
+        "editRole",
+        "createRole"
+      ],
+      "parent": "headerContainer",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "1",
+        "width": "auto"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "createRole": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "+ Role",
+        "color": "primary",
+        "data-id": "create-role",
+        "data-testid": "create-role-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createRole",
+        "shape": "",
+        "size": "sm",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "deleteRoles": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Delete",
+        "color": "primary",
+        "data-id": "delete-roles",
+        "data-testid": "delete-roles-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "deleteRoles",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "editRole": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Edit",
+        "color": "primary",
+        "data-id": "edit-role",
+        "data-testid": "edit-role-trigger",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "editRole",
+        "shape": "",
+        "size": "sm",
+        "variant": "outline"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "grid": {
+      "custom": {},
+      "displayName": "Grid",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridSelectionColumn",
+        "gridNameColumn",
+        "gridDescriptionColumn",
+        "gridPermissionsColumn",
+        "gridEditableColumn"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "column-reordering-allowed": true,
+        "data-id": "roles-table",
+        "size": "sm",
+        "st-host-height": "300px",
+        "style": {
+          "width": "100%"
+        }
+      },
+      "type": {
+        "resolvedName": "Grid"
+      }
+    },
+    "gridDescriptionColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Description",
+        "path": "description",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridEditableBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridEditableColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "yes",
+        "mode": "default",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridEditableColumn": {
+      "custom": {},
+      "displayName": "Grid Custom Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [
+        "gridEditableBadge",
+        "gridNonEditableBadge"
+      ],
+      "parent": "grid",
+      "props": {
+        "header": "Editable",
+        "path": "editable",
+        "resizable": true
+      },
+      "type": {
+        "resolvedName": "GridCustomColumn"
+      }
+    },
+    "gridNameColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Name",
+        "path": "name",
+        "resizable": true,
+        "sortable": "true"
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridNonEditableBadge": {
+      "custom": {},
+      "displayName": "Badge",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "gridEditableColumn",
+      "props": {
+        "bordered": true,
+        "data-pattern": "no",
+        "mode": "primary",
+        "size": "xs",
+        "st-text-transform": "capitalize"
+      },
+      "type": {
+        "resolvedName": "Badge"
+      }
+    },
+    "gridPermissionsColumn": {
+      "custom": {},
+      "displayName": "Grid Text Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "header": "Permissions",
+        "path": "permissionNames",
+        "resizable": true
+      },
+      "type": {
+        "resolvedName": "GridTextColumn"
+      }
+    },
+    "gridSelectionColumn": {
+      "custom": {},
+      "displayName": "Grid Selection Column",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "grid",
+      "props": {
+        "auto-width": true,
+        "frozen": true
+      },
+      "type": {
+        "resolvedName": "GridSelectionColumn"
+      }
+    },
+    "headerContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "search",
+        "buttonsContainer"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "headerContainer",
+        "justify": "between",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "search": {
+      "custom": {
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "headerContainer",
+      "props": {
+        "bordered": true,
+        "data-id": "search-input",
+        "data-testid": "search-input",
+        "full-width": false,
+        "id": "search",
+        "label": "",
+        "max": 100,
+        "name": "",
+        "placeholder": "Search",
+        "required": false,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    }
+  },
+  "screenId": "root"
+}

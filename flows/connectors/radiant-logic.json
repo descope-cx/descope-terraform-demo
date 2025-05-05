@@ -1,0 +1,17 @@
+{
+  "configuration": {
+    "authentication": {
+      "apiKey": {},
+      "basic": {},
+      "method": "none"
+    },
+    "baseUrl": "https://test-descope.free.beeceptor.com",
+    "headers": [],
+    "includeHeadersInContext": false,
+    "insecure": false
+  },
+  "description": "Radiant Logic Connector for JIT",
+  "id": "CI2wYdYv29QMIXTv6bGoV6Odo9c7Y",
+  "name": "Radiant Logic",
+  "type": "http"
+}

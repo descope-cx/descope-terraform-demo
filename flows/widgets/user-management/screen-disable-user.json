@@ -1,0 +1,208 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "titleText",
+        "bodyContainer",
+        "buttonsContainer"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "border-radius": "sm",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "2",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "bodyContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "bodyText",
+        "bodyText2"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "border-radius": "sm",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "bodyText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "",
+        "data-id": "body-text",
+        "full-width": false,
+        "id": "bodyText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "bodyText2": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "This will not affect users with the status \"Invited\".",
+        "data-id": "body-text",
+        "full-width": false,
+        "id": "bodyText2",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "disableUserCancelButton",
+        "disableUserSubmitButton"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "disableUserCancelButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Cancel",
+        "color": "primary",
+        "data-id": "modal-cancel",
+        "data-testid": "disable-user-modal-cancel",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "disableUserCancelButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "UserManagementDisableButton"
+      }
+    },
+    "disableUserSubmitButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Disable",
+        "color": "primary",
+        "data-id": "modal-submit",
+        "data-testid": "disable-user-modal-submit",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "disableUserSubmitButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "titleText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Disable user",
+        "full-width": false,
+        "id": "titleText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "disable-user-modal"
+}

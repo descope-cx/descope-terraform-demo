@@ -1,0 +1,19 @@
+{
+  "componentsVersion": "2.0.513",
+  "description": "Sign in using preferred MFA method and Passwords",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "Sign In (Passwords)",
+  "screens": [
+    "bot-detected",
+    "replace-expired-password-itTB",
+    "replace-expired-password-vMOZ",
+    "verify-totp"
+  ],
+  "sharedInteractions": [
+    {
+      "id": "3.success",
+      "type": "success"
+    }
+  ]
+}

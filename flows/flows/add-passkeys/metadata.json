@@ -1,0 +1,11 @@
+{
+  "componentsVersion": "2.0.463",
+  "description": "Default Descope Promote Passkeys (WebAuthn) flow; encourages the user to configure Passkeys (WebAuthn) authentication for easier login experience. Can be used in any part of the application.",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "Promote Passkeys (WebAuthn)",
+  "screens": [
+    "device-not-supported",
+    "promote-passkeys-webauthn"
+  ]
+}

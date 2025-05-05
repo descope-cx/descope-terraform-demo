@@ -1,0 +1,32 @@
+{
+  "domain": "",
+  "emailServiceProvider": "Descope",
+  "emailTemplates": [
+    {
+      "active": true,
+      "body": "{{.code}} is your authentication code.\nThis code will expire in {{.expirationTime}}.\n\n{{.domain}} #{{.code}}",
+      "bodyPlainText": "{{.code}} is your authentication code.\nThis code will expire in {{.expirationTime}}.\n\n{{.domain}} #{{.code}}",
+      "subject": "Passwordless login!",
+      "useBodyPlainText": false
+    }
+  ],
+  "enabled": true,
+  "expirationTime": 3,
+  "expirationTimeUnit": "minutes",
+  "rateLimitRetries": 3,
+  "rateLimitTimeframe": 60,
+  "textServiceProvider": "Descope",
+  "textTemplates": [
+    {
+      "active": true,
+      "body": "{{.code}} is your authentication code.\nThis code will expire in {{.expirationTime}}.\n\n{{.domain}} #{{.code}}"
+    }
+  ],
+  "voiceServiceProvider": "Descope",
+  "voiceTemplates": [
+    {
+      "active": true,
+      "body": "The authentication code is: {{.code}}.\nThis code will expire in {{.expirationTime}}."
+    }
+  ]
+}

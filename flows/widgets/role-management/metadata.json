@@ -1,0 +1,18 @@
+{
+  "components": [
+    "role-management-widget-grid",
+    "role-management-widget-edit",
+    "role-management-widget-create",
+    "role-management-widget-delete"
+  ],
+  "description": "Delegate role management to tenant admins",
+  "flowsIds": [],
+  "name": "Roles Management Widget",
+  "screens": [
+    "create-role",
+    "delete-roles",
+    "edit-role",
+    "root"
+  ],
+  "type": "role-management-widget"
+}

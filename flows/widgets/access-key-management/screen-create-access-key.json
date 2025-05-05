@@ -1,0 +1,258 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "titleText",
+        "nameInput",
+        "expirationInput",
+        "rolesInput",
+        "ipsInput",
+        "buttonsContainer"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "2",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "createAccessKeyCancelButton",
+        "createAccessKeySubmitButton"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "createAccessKeyCancelButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Cancel",
+        "color": "primary",
+        "data-id": "modal-cancel",
+        "data-testid": "create-access-key-modal-cancel",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createAccessKeyCancelButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "createAccessKeySubmitButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Create",
+        "color": "primary",
+        "data-id": "modal-submit",
+        "data-testid": "create-access-key-modal-submit",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "createAccessKeySubmitButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "expirationInput": {
+      "custom": {},
+      "displayName": "Expiration Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data": [
+          {
+            "label": "30 Days",
+            "value": "30"
+          },
+          {
+            "label": "60 Days",
+            "value": "60"
+          },
+          {
+            "label": "90 Days",
+            "value": "90"
+          },
+          {
+            "label": "Never",
+            "value": "0"
+          }
+        ],
+        "data-id": "expiration-combobox",
+        "default-value": "30",
+        "full-width": true,
+        "id": "expirationInput",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "Expiration",
+        "name": "expiration",
+        "required": true,
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "Select"
+      }
+    },
+    "ipsInput": {
+      "custom": {},
+      "displayName": "IPs Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-errormessage-pattern-mismatch": "Each permitted IP must be a valid IPv4, IPv6, or CIDR range",
+        "data-id": "ips-multiselect",
+        "full-width": true,
+        "id": "ipsInput",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "Permitted IPs",
+        "name": "permittedIps",
+        "pattern": "/^(?:(?:d{1,3}.){3}d{1,3}(?:/(?:d|[1-2]d|3[0-2]))?|(?:[a-fA-F0-9]{1,4}:){1,7}[a-fA-F0-9]{1,4}(?:/d{1,3})?)$/",
+        "size": "sm",
+        "variant": "dynamicCombobox"
+      },
+      "type": {
+        "resolvedName": "MultiSelect"
+      }
+    },
+    "nameInput": {
+      "custom": {
+        "contextKey": "name",
+        "type": "input"
+      },
+      "displayName": "Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "border-radius": "sm",
+        "bordered": true,
+        "full-width": true,
+        "id": "name",
+        "label": "Name",
+        "max": 100,
+        "name": "name",
+        "placeholder": "Name",
+        "required": true,
+        "size": "sm",
+        "type": "text"
+      },
+      "type": {
+        "resolvedName": "TableWidgetsSearchInput"
+      }
+    },
+    "rolesInput": {
+      "custom": {},
+      "displayName": "Roles Input",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-id": "roles-multiselect",
+        "full-width": true,
+        "id": "rolesInput",
+        "item-label-path": "data-name",
+        "item-value-path": "data-id",
+        "label": "Roles",
+        "name": "roleNames",
+        "size": "sm"
+      },
+      "type": {
+        "resolvedName": "MultiSelect"
+      }
+    },
+    "titleText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "New access key",
+        "full-width": false,
+        "id": "titleText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "create-access-key-modal"
+}

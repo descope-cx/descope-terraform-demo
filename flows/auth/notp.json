@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "expirationTime": 3,
+  "expirationTimeUnit": "minutes",
+  "whatsappChatbotProvider": "Descope",
+  "whatsappErrorNOTPTemplates": [],
+  "whatsappErrorTemplateId": "System",
+  "whatsappSuccessNOTPTemplates": [],
+  "whatsappSuccessTemplateId": "System",
+  "whatsappVerifyNOTPTemplates": [],
+  "whatsappVerifyTemplateId": "System"
+}

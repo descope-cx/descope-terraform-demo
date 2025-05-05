@@ -1,0 +1,12 @@
+{
+  "components": [
+    "audit-management-widget-grid"
+  ],
+  "description": "Display audit table to tenant admins",
+  "flowsIds": [],
+  "name": "Audit Management Widget",
+  "screens": [
+    "root"
+  ],
+  "type": "audit-management-widget"
+}

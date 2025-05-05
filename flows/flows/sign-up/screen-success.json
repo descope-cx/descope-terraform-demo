@@ -1,0 +1,156 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "qKV6Yoer8b",
+        "auED4dEJkJ",
+        "vm7wC_Ihbh",
+        "iS21Xuzoeu",
+        "fyz-aN6hyx"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "4",
+        "spaceBetween": "5",
+        "st-items-grow": 0,
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "auED4dEJkJ": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Member Registration\n\n",
+        "full-width": false,
+        "id": "auED4dEJkJ",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "fyz-aN6hyx": {
+      "custom": {},
+      "displayName": "Error Message",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "color": "error",
+        "data-type": "error-message",
+        "full-width": false,
+        "hide-when-empty": true,
+        "id": "fyz-aN6hyx",
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "error",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "ErrorMessage"
+      }
+    },
+    "iS21Xuzoeu": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Continue",
+        "color": "primary",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "iS21Xuzoeu",
+        "shape": "",
+        "size": "md",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "qKV6Yoer8b": {
+      "custom": {},
+      "displayName": "Logo",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "alt": "Logo",
+        "height": "100px",
+        "id": "qKV6Yoer8b"
+      },
+      "type": {
+        "resolvedName": "Logo"
+      }
+    },
+    "vm7wC_Ihbh": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Registration successful. You can now continue to your member portal.\n\n",
+        "full-width": false,
+        "id": "vm7wC_Ihbh",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "icon": "",
+      "id": "iS21Xuzoeu",
+      "label": "Continue",
+      "subType": "",
+      "type": ""
+    }
+  ],
+  "screenId": "SC2wWZcPkBKmaAQDaaOn4HjswJgyU"
+}

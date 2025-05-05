@@ -1,0 +1,11 @@
+{
+  "widgets": [
+    "access-key-management",
+    "applications-portal",
+    "audit-management",
+    "role-management",
+    "user-access-key-management",
+    "user-management",
+    "user-profile"
+  ]
+}

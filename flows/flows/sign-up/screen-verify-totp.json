@@ -1,0 +1,160 @@
+{
+  "contents": {
+    "1sMmkeVxVT": {
+      "custom": {},
+      "displayName": "Error Message",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "color": "error",
+        "data-type": "error-message",
+        "full-width": false,
+        "hide-when-empty": true,
+        "id": "1sMmkeVxVT",
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "error",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "ErrorMessage"
+      }
+    },
+    "LmrSIGOWZb": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Scan the QR code below using your Authenticator application",
+        "full-width": false,
+        "id": "LmrSIGOWZb",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "LmrSIGOWZb",
+        "UV4gtH3-wl",
+        "Uxv7qARLkj",
+        "oneTimeCodeId",
+        "1sMmkeVxVT"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "8",
+        "spaceBetween": "4",
+        "st-items-grow": 0,
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "UV4gtH3-wl": {
+      "custom": {},
+      "displayName": "TOTP QR Code",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "alt": "QR Code",
+        "height": "100px",
+        "id": "UV4gtH3-wl"
+      },
+      "type": {
+        "resolvedName": "TOTPImage"
+      }
+    },
+    "Uxv7qARLkj": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Enter the 6-digit code",
+        "full-width": false,
+        "id": "Uxv7qARLkj",
+        "isEnriched": true,
+        "italic": false,
+        "link-target-blank": true,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "oneTimeCodeId": {
+      "custom": {
+        "type": "oneTimeCode"
+      },
+      "displayName": "One Time Code",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "bordered": true,
+        "data-auto-submit": true,
+        "data-errormessage-pattern-mismatch": "Must be a 6 digit number",
+        "data-errormessage-value-missing": "Please fill out this field.",
+        "digits": 6,
+        "full-width": false,
+        "fullWidth": false,
+        "id": "oneTimeCodeId",
+        "label": "",
+        "name": "code",
+        "required": true,
+        "size": "lg",
+        "type": "tel"
+      },
+      "type": {
+        "resolvedName": "CodeInput"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "icon": "",
+      "id": "oneTimeCodeId",
+      "label": "Submit code",
+      "subType": "",
+      "type": ""
+    }
+  ],
+  "screenId": "SC2wZM1Qlbhs7x5EhKGep9TjVi5vD"
+}

@@ -1,0 +1,16 @@
+{
+  "componentsVersion": "2.0.463",
+  "description": "Extra user validation, using social login only. Commonly used before performing high risk actions.",
+  "disabled": false,
+  "fingerprint": false,
+  "name": "Step Up",
+  "screens": [
+    "step-up"
+  ],
+  "sharedInteractions": [
+    {
+      "id": "5.success",
+      "type": "success"
+    }
+  ]
+}

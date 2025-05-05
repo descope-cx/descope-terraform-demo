@@ -1,0 +1,15 @@
+{
+  "configuration": {
+    "authMethod": "plain",
+    "fromEmail": "bd3ed16c48-30b04d+1@inbox.mailtrap.io",
+    "fromName": "",
+    "host": "sandbox.smtp.mailtrap.io",
+    "password": "PLACEHOLDER_VALUE",
+    "port": 587,
+    "username": "a1590ce4b6f834"
+  },
+  "description": "",
+  "id": "CI2wdnhxJLXxwDo1K9KT6At625GhX",
+  "name": "SMTP Connector",
+  "type": "smtp"
+}

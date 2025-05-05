@@ -1,0 +1,158 @@
+{
+  "contents": {
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "titleText",
+        "bodyText",
+        "buttonsContainer"
+      ],
+      "props": {
+        "align": "start",
+        "background": "#80808000",
+        "border-radius": "sm",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "0",
+        "paddingY": "0",
+        "space-between": "md",
+        "spaceBetween": "2",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "bodyText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "",
+        "data-id": "body-text",
+        "full-width": false,
+        "id": "bodyText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "body1"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "buttonsContainer": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "deactivateAccessKeyCancelButton",
+        "deactivateAccessKeySubmitButton"
+      ],
+      "parent": "ROOT",
+      "props": {
+        "align": "start",
+        "background": "#ffffff00",
+        "data-editor-type": "container",
+        "direction": "row",
+        "id": "buttonsContainer",
+        "justify": "end",
+        "paddingX": "0",
+        "paddingY": "0",
+        "spaceBetween": "0",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    },
+    "deactivateAccessKeyCancelButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Cancel",
+        "color": "primary",
+        "data-id": "modal-cancel",
+        "data-testid": "deactivate-access-keys-modal-cancel",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "deactivateAccessKeyCancelButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "link"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "deactivateAccessKeySubmitButton": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "buttonsContainer",
+      "props": {
+        "children": "Deactivate",
+        "color": "primary",
+        "data-id": "modal-submit",
+        "data-testid": "deactivate-access-keys-modal-submit",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": false,
+        "id": "deactivateAccessKeySubmitButton",
+        "shape": "",
+        "size": "xs",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "titleText": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Deactivate access keys",
+        "full-width": false,
+        "id": "titleText",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    }
+  },
+  "screenId": "deactivate-access-keys-modal"
+}

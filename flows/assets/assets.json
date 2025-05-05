@@ -1,0 +1,32 @@
+{
+  "mapping": {
+    "auth/enchantedlink.json": {
+      "emailTemplates": [
+        {
+          "body": "body-8e4b5e85070043892797b6b8122d386fa74083b1448c11137c90799f3e606096.html"
+        }
+      ]
+    },
+    "auth/magiclink.json": {
+      "emailTemplates": [
+        {
+          "body": "body-b0f033e26610030ed23e08b0dd4d6c93014c912b9fef6a4151f198975dffde90.html"
+        }
+      ]
+    },
+    "auth/password.json": {
+      "emailTemplates": [
+        {
+          "body": "body-decea52ac1b74d84b60f5a9bc20e67fc5b86296847eec7d72ab25cc19e218fb5.html"
+        }
+      ]
+    },
+    "styles/light.json": {
+      "components": {
+        "logo": {
+          "--descope-logo-url": "img-5486e05798271b38b112210c21a2932dbcacaf97bcd191fe0417ac77dd934dbb.svg"
+        }
+      }
+    }
+  }
+}

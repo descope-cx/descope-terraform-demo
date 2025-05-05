@@ -1,0 +1,85 @@
+{
+  "contents": {
+    "A__3HmdFYc": {
+      "custom": {},
+      "displayName": "Text",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Unfortunately, your device doesn't support Passkeys (WebAuthn) recognition",
+        "full-width": false,
+        "id": "A__3HmdFYc",
+        "italic": false,
+        "mode": "primary",
+        "text-align": "center",
+        "variant": "subtitle2"
+      },
+      "type": {
+        "resolvedName": "Text"
+      }
+    },
+    "NJLJYnZXx6": {
+      "custom": {
+        "type": "button"
+      },
+      "displayName": "Button",
+      "hidden": false,
+      "isCanvas": false,
+      "linkedNodes": {},
+      "nodes": [],
+      "parent": "ROOT",
+      "props": {
+        "children": "Close",
+        "data-type": "button",
+        "formNoValidate": false,
+        "full-width": true,
+        "id": "NJLJYnZXx6",
+        "mode": "primary",
+        "size": "md",
+        "variant": "contained"
+      },
+      "type": {
+        "resolvedName": "Button"
+      }
+    },
+    "ROOT": {
+      "custom": {},
+      "displayName": "Container",
+      "hidden": false,
+      "isCanvas": true,
+      "linkedNodes": {},
+      "nodes": [
+        "A__3HmdFYc",
+        "NJLJYnZXx6"
+      ],
+      "props": {
+        "align": "center",
+        "background": "",
+        "data-editor-type": "container",
+        "direction": "column",
+        "id": "ROOT",
+        "justify": "center",
+        "paddingX": "4",
+        "paddingY": "8",
+        "spaceBetween": "4",
+        "width": "100%"
+      },
+      "type": {
+        "resolvedName": "Container"
+      }
+    }
+  },
+  "interactions": [
+    {
+      "icon": "",
+      "id": "NJLJYnZXx6",
+      "label": "Close",
+      "subType": "",
+      "type": ""
+    }
+  ],
+  "screenId": "SC2wWOW6kzDAI1JMF6FlnrSUgdkph"
+}

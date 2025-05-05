@@ -1,0 +1,176 @@
+{
+  "startTask": "1",
+  "tasks": {
+    "0": {
+      "id": "0",
+      "name": "Promote Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "aJcUrl9Fu0",
+            "taskId": "2"
+          },
+          {
+            "interactionId": "bZWqIar1da",
+            "taskId": "3"
+          }
+        ]
+      },
+      "screenId": "SC2wWOW9XKjsD5FjKVMAHtuGIYM8S",
+      "type": "screen",
+      "view": {
+        "x": 1205.7043546907537,
+        "y": 496.43396025550044
+      }
+    },
+    "1": {
+      "action": "loadUser",
+      "id": "1",
+      "name": "Load user",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "4"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 242.78583039421744,
+        "y": 510.78745591326106
+      }
+    },
+    "2": {
+      "action": "webauthn-update-user-start",
+      "arguments": {
+        "finishStepId": {
+          "type": "inline",
+          "value": "2.end"
+        }
+      },
+      "id": "2",
+      "name": "Update User / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "2.end"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1688.3980313098689,
+        "y": 515.5859165003363
+      }
+    },
+    "2.end": {
+      "action": "webauthn-update-user-finish",
+      "id": "2.end",
+      "name": "Update User / Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "success",
+            "taskId": "3"
+          }
+        ]
+      },
+      "type": "automated",
+      "view": {
+        "x": 1688.3980313098689,
+        "y": 515.5859165003363
+      }
+    },
+    "3": {
+      "action": "logged-in",
+      "id": "3",
+      "name": "DONE",
+      "next": {},
+      "type": "automated",
+      "view": {
+        "x": 2144.4349473638244,
+        "y": 648.863257656948
+      }
+    },
+    "4": {
+      "conditions": [
+        {
+          "atomicConditions": [
+            {
+              "operator": "is-true",
+              "predicate": {
+                "type": "inline",
+                "value": ""
+              },
+              "target": {
+                "type": "context",
+                "value": "deviceInfo.webAuthnSupport"
+              }
+            }
+          ],
+          "interactionId": "oo18llfdokc",
+          "name": "Supports Passkeys (WebAuthn)"
+        },
+        {
+          "interactionId": "ELSE",
+          "name": "Doesn't support Passkeys (WebAuthn)"
+        }
+      ],
+      "id": "4",
+      "name": "Support of Passkeys (WebAuthn)",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "oo18llfdokc",
+            "taskId": "0"
+          },
+          {
+            "interactionId": "ELSE",
+            "taskId": "5"
+          }
+        ]
+      },
+      "screenId": "new-4",
+      "type": "condition",
+      "view": {
+        "x": 679.9185004583503,
+        "y": 504.6800166969357
+      }
+    },
+    "5": {
+      "id": "5",
+      "name": "Device Not Supported",
+      "next": {
+        "rules": [
+          {
+            "interactionId": "NJLJYnZXx6",
+            "taskId": "3"
+          }
+        ]
+      },
+      "screenId": "SC2wWOW6kzDAI1JMF6FlnrSUgdkph",
+      "type": "screen",
+      "view": {
+        "x": 1202.102448692021,
+        "y": 809.7260918313864
+      }
+    },
+    "start": {
+      "id": "start",
+      "name": "start",
+      "next": {
+        "rules": [
+          {
+            "taskId": "1"
+          }
+        ]
+      },
+      "view": {
+        "x": 13.785830394217385,
+        "y": 562.1400705387821
+      }
+    }
+  }
+}
