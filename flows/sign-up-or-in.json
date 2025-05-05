@@ -103,6 +103,7 @@
             "linkedNodes": {},
             "nodes": [
               "Vqjhp_hT8y",
+              "X9OdGWYajH",
               "69fAEt3qFj",
               "d2BuppDC30",
               "cdivS_4ad8",
@@ -213,6 +214,29 @@
             },
             "type": {
               "resolvedName": "Logo"
+            }
+          },
+          "X9OdGWYajH": {
+            "custom": {},
+            "displayName": "Text",
+            "hidden": false,
+            "isCanvas": false,
+            "linkedNodes": {},
+            "nodes": [],
+            "parent": "ROOT",
+            "props": {
+              "children": "TESTING THE CI/CD PIPELINE\n\n",
+              "full-width": false,
+              "id": "X9OdGWYajH",
+              "isEnriched": true,
+              "italic": false,
+              "link-target-blank": true,
+              "mode": "primary",
+              "text-align": "center",
+              "variant": "h3"
+            },
+            "type": {
+              "resolvedName": "Text"
             }
           },
           "cdivS_4ad8": {
@@ -860,8 +884,20 @@
       {
         "id": "14.3",
         "label": "End"
+      },
+      {
+        "id": "14.13",
+        "label": "Any risk detected?"
       }
-    ]
+    ],
+    "translation": {
+      "connectorId": "manual",
+      "enabled": true,
+      "sourceLanguage": "en",
+      "targetLanguages": [
+        "es"
+      ]
+    }
   },
   "screens": [
     {
@@ -957,6 +993,7 @@
           "linkedNodes": {},
           "nodes": [
             "Vqjhp_hT8y",
+            "X9OdGWYajH",
             "69fAEt3qFj",
             "d2BuppDC30",
             "cdivS_4ad8",
@@ -1067,6 +1104,29 @@
           },
           "type": {
             "resolvedName": "Logo"
+          }
+        },
+        "X9OdGWYajH": {
+          "custom": {},
+          "displayName": "Text",
+          "hidden": false,
+          "isCanvas": false,
+          "linkedNodes": {},
+          "nodes": [],
+          "parent": "ROOT",
+          "props": {
+            "children": "TESTING THE CI/CD PIPELINE\n\n",
+            "full-width": false,
+            "id": "X9OdGWYajH",
+            "isEnriched": true,
+            "italic": false,
+            "link-target-blank": true,
+            "mode": "primary",
+            "text-align": "center",
+            "variant": "h3"
+          },
+          "type": {
+            "resolvedName": "Text"
           }
         },
         "cdivS_4ad8": {

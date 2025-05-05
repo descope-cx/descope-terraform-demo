@@ -120,6 +120,24 @@
             "name": "Impossible Traveler"
           },
           {
+            "atomicConditions": [
+              {
+                "operator": "contains",
+                "predicate": {
+                  "type": "inline",
+                  "value": "RU"
+                },
+                "target": {
+                  "type": "context",
+                  "value": "geo.country"
+                }
+              }
+            ],
+            "interactionId": "0fn57k22iq3",
+            "logicalOr": false,
+            "name": "Customer is from Russia"
+          },
+          {
             "atomicConditions": [],
             "interactionId": "ELSE",
             "name": "No Risks"
@@ -447,13 +465,17 @@
   },
   "flowId": "sign-in",
   "metadata": {
-    "componentsVersion": "2.0.513",
+    "componentsVersion": "2.0.516",
     "description": "Sign in using preferred MFA method and Passwords",
     "name": "Sign In (Passwords)",
     "sharedInteractions": [
       {
         "id": "3.success",
         "type": "success"
+      },
+      {
+        "id": "13.0fn57k22iq3",
+        "label": "Customer is from Russia"
       }
     ]
   },
